@@ -43,6 +43,7 @@ function addDeleteBtn () {
 
     const items = document.querySelectorAll("li");
 
+    // Un = asigna, el == compara tipo de datos, y el === el valor y tipo.
     if (items.length === 0) {
       empty.style.display = "block";
     }
