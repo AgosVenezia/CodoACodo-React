@@ -1,7 +1,7 @@
 import Swal from 'sweetalert2'; // Estructuras simples
-import withReactContent from 'sweetalert2-react-content'; // Estructuras más complejas
+//import withReactContent from 'sweetalert2-react-content';
 
-const MySwal = withReactContent(Swal);
+//const MySwal = withReactContent(Swal); // Estructuras más complejas
 
 const Cookies = () => {
 
