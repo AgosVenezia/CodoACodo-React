@@ -1,5 +1,5 @@
 function Peliculas() {
-  let pagina = 1;
+  let pagina = 1; // inicializa en página 1
 
   const btnAnterior = (e)=>{
     if(pagina > 1){
@@ -21,6 +21,7 @@ function Peliculas() {
     try{
         // el fetch es el encargado de esperar la llegada de la información/respuesta. El asincronismo de ese await lo dispara cargarPeliculas (solicitud del llamado)
         const respuesta = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=191528030c357419329af1198edbcb24&language=es-MX&page=${pagina}`);
+        //                                              método GET /movie/popular + api_key propia                       + Query Strings language y page
         console.log(respuesta);
 
         // todo esto ocurre en un asincronismo porque los procesos van a demorar
@@ -39,7 +40,7 @@ function Peliculas() {
                 `; // las basticks concatenan strings y variables
             }); 
         
-            document.getElementById("contenedor").innerHTML = peliculas;  
+            document.getElementById("contenedor").innerHTML = peliculas; // creación del contenedor visual de películas
         }
 
         //verificación de mensaje de error para dar al usuario
